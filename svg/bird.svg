@@ -1,17 +1,23 @@
-<svg width="500.79px" height="200px" viewBox="0 0 500.79 200">
-	<style type="text/css">
-		#leaves{fill:#8CC63F;}
-		#bark{fill:#A27729;}
-	</style>
-	<g id="tree">
-		<path id="bark" d="M91.33,165.51c0,0,4.18-27.65,1.73-35.82l-18.55-25.03l3.01-2.74l17.45,19.87l1.91-37.6h4.44l1.83,24.53
-		l15.26-16.35l3.27,4.36l-16.07,19.34c0,0-2.72,0-1.09,19.34c1.63,19.34,3,29.7,3,29.7L91.33,165.51z"/>
-		<g id="leaves">
-			<path class="leaf" d="M96.97,79.07c0,0-14.92,4.34-23.52-14.05c0,0,19.4-7.98,24.37,11.9c0,0-9.68-3.57-13.07-6.73
-				C84.75,70.2,91.82,77.99,96.97,79.07z"/>
-			<path class="leaf" d="M74.07,100.91c0,0-15.94-1.51-17.2-22.39c0,0,21.62-0.27,18.83,20.66c0,0-7.92-7.1-9.97-11.41
-				C65.73,87.77,69.55,97.92,74.07,100.91z"/>
-			<!-- ... -->
-		</g>
-	</g>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" x="0px" y="0px"
+	 viewBox="0 0 500 500">
+	 
+  <circle cx="50" cy="50" r="40"  
+  stroke="green" stroke-width="4" fill="yellow" />
+  
+  <ellipse cx="250" cy="100" rx="120" ry="70" style="fill:red;stroke:black;stroke-width:3" /> 
+  
+  <rect x="50" y="50" width="200" height="200" style="fill:green;stroke:orange;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />  
+  
+  <line x1="5" y1="5" x2="150" y2="150" style="stroke:rgb(0,0,255);stroke-width:3" />  
+  
+  <polyline points="10,20 40,30 55,45 76,125 125,135 210,200" style="fill:none;stroke:black;stroke-width:3" />  
+  
+  <text x="5" y="30">A nice rectangle</text>
+  
+  <path d="M250 10 L100 200 L400 200 Z" />
+  
+  <path d="M250 10 L100 200 L400 200 Z" />
+  
+  <path d="M250 10 L100 200 L400 200 Z" />
 </svg>
