@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" x="0px" y="0px"
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" x="0px" y="0px"
 	 viewBox="0 0 500 500">
-	 
-  <circle cx="50" cy="50" r="40"  
+    <circle cx="50" cy="50" r="40"  
   stroke="green" stroke-width="4" fill="yellow" />
-  
-  <ellipse cx="250" cy="100" rx="120" ry="70" style="fill:red;stroke:black;stroke-width:3" /> 
-  
-  <rect x="50" y="50" width="200" height="200" style="fill:green;stroke:orange;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />  
-  
-  <line x1="5" y1="5" x2="150" y2="150" style="stroke:rgb(0,0,255);stroke-width:3" />  
-  
-  <polyline points="10,20 40,30 55,45 76,125 125,135 210,200" style="fill:none;stroke:black;stroke-width:3" />  
-  
-  <text x="5" y="30">A nice rectangle</text>
-  
-  <path d="M250 10 L100 200 L400 200 Z" />
-  
-	<g fill="grey"
+    <g>
+        <ellipse cx="250" cy="100" rx="120" ry="70" style="fill:red;stroke:black;stroke-width:3" />
+        <rect x="50" y="50" width="200" height="200" style="fill:green;stroke:orange;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
+        <line x1="5" y1="5" x2="150" y2="150" style="stroke:rgb(0,0,255);stroke-width:3" />
+        <polyline points="10,20 40,30 55,45 76,125 125,135 210,200" style="fill:none;stroke:black;stroke-width:3" />
+        <text x="5" y="30">A nice rectangle</text>
+        <path d="M250 10 L100 200 L400 200 Z" />
+        <g fill="grey"
      transform="rotate(-10 50 100)
                 translate(-36 45.5)
                 skewX(40)
                 scale(1 0.5)">
-	  <path d="M250 10 L100 200 L400 200 Z" />
-		<g fill="grey"
+            <path d="M250 10 L100 200 L400 200 Z" />
+            <g fill="grey"
      transform="translate(-36 45.5)">
-	  		<path d="M250 10 L100 200 L400 200 Z" />
-		</g>
-	</g>
+                <path d="M250 10 L100 200 L400 200 Z" />
+            </g>
+        </g>
+    </g>
 </svg>
