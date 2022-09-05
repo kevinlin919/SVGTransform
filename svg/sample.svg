@@ -9,61 +9,65 @@
 	         stroke-width="0"/>
 	<g transform="translate(11 22)">
 		<rect width="279.837775"
-			  height="53.881808"
-			  rx="0"
-			  ry="0"
-			  transform="translate(11.384706 226.825029)"
-			  fill="#ede8d2"
-			  stroke="#000"
-			  stroke-width="12"/>
+		      height="53.881808"
+		      rx="0"
+		      ry="0"
+		      transform="translate(11.384706 226.825029)"
+		      fill="#ede8d2"
+		      stroke="#000"
+		      stroke-width="12"/>
 		<polygon points="0,-71.822604 68.307356,-22.194405 42.216268,58.105707 -42.216268,58.105707 -68.307356,-22.194405 0,-71.822604"
-				 transform="translate(150 168.719322)"
-				 fill="#c3fb83"
-				 stroke-width="0"/>
+		         transform="translate(150 168.719322)"
+		         fill="#c3fb83"
+		         stroke-width="0"/>
 		<line x1="-120.688399"
-			  y1="19.939823"
-			  x2="120.688399"
-			  y2="-19.939822"
-			  transform="translate(145.756229 44.697841)"
-			  fill="none"
-			  stroke="#3f5787"
-			  stroke-width="33"
-			  stroke-linecap="round"
-			  stroke-linejoin="round"/>
-			  <g transform="matrix(.9 0 0 0.8 7 66)">
-				<line x1="-15"
-					  y1="0"
-					  x2="15"
-					  y2="0"
-					  transform="translate(510.969816 188.474454)"
-					  fill="none"
-					  stroke="#3f5787"
-					  stroke-width="3"/>
-				<path d="
-                  M10,10
-                  l200,-10
-                  a10,5,0,0,0,-150,20
-                  h100
-                  v100
-                  q20,100,20,-35
-                  c-100,100,-100,10,50,10
-                  t-50,30
-                  s-50,30,50,10
-                  Z"
-					  fill="none"
-					  stroke="#f607ce"
-					  stroke-width="1"/>
-			  </g>
+		      y1="19.939823"
+		      x2="120.688399"
+		      y2="-19.939822"
+		      transform="translate(145.756229 44.697841)"
+		      fill="none"
+		      stroke="#3f5787"
+		      stroke-width="33"
+		      stroke-linecap="round"
+		      stroke-linejoin="round"/>
+		<g transform="matrix(.9 0 0 0.8 7 66)">
+			<line x1="-15"
+			      y1="0"
+			      x2="15"
+			      y2="0"
+			      transform="translate(510.969816 188.474454)"
+			      fill="none"
+			      stroke="#3f5787"
+			      stroke-width="3"/>
+			<path d="
+					  m20,20
+					  l200,-10
+					  a10,5,0,0,0,-150,20
+					  h100
+					  v100
+					  q20,100,20,-35
+					  c-100,100,-100,10,50,10
+					  t-50,30
+					  s-50,30,50,10
+					  Z"
+			      fill="none"
+			      stroke="#f607ce"
+			      stroke-width="1"/>
+			<path d="M 10 10 L 210.0 0.0 A 10 5 0 0 0 60.0 20.0 L 160.0 20.0 L 160.0 120.0 Q 180.0 220.0 180.0 85.0 C 80.0 185.0 80.0 95.0 230.0 95.0 T 180.0 125.0 S 130.0 155.0 230.0 135.0 Z"
+			      fill="none"
+			      stroke="#2607ce"
+			      stroke-width="1"/>
+		</g>
 		<text dx="0"
-			  dy="0"
-			  font-size="15"
-			  font-weight="400"
-			  transform="matrix(1.562761-.258674 0.657816 3.97415 83.886457 280.357226)"
-			  fill="#ef2121"
-			  stroke-width="0">
+		      dy="0"
+		      font-size="15"
+		      font-weight="400"
+		      transform="matrix(1.562761-.258674 0.657816 3.97415 83.886457 280.357226)"
+		      fill="#ef2121"
+		      stroke-width="0">
 			<tspan y="0"
-				   font-weight="400"
-				   stroke-width="0"><![CDATA[Sample Text]]></tspan>
+			       font-weight="400"
+			       stroke-width="0"><![CDATA[Sample Text]]></tspan>
 		</text>
 	</g>
 </svg>
