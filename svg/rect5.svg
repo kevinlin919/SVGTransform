@@ -4,7 +4,7 @@
      viewBox="0 0 100 100"
      >
 	<g transform="translate(10,0)">
-		<g transform="rotate(45)">
+		<g transform="rotate(45,50,50)">
 			<rect width="50"
 			      height="50"
 			      x="30"
