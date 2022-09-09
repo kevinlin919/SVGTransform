@@ -5,10 +5,10 @@
      >
 	<g transform="translate(10,0)">
 		<g transform="rotate(45)">
-			<rect width="80"
-			      height="80"
-			      x="10"
-			      y="10"
+			<rect width="50"
+			      height="50"
+			      x="30"
+			      y="30"
 			      fill="#ede8d2"
 			      stroke="#000"
 			      stroke-width="1"/>
