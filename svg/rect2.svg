@@ -6,9 +6,9 @@
      >
 	<g transform="translate(10,0)">
 		<rect width="80"
-		      height="85"
+		      height="80"
 		      x="10"
-		      y="5"
+		      y="10"
 		      fill="#ede8d2"
 		      stroke="#000"
 		      stroke-width="1"/>
