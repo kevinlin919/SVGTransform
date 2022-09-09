@@ -3,14 +3,12 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="0 0 100 100"
      >
-<text dx="0"
-			  dy="0"
+<text x="10"
+			  y="30"
 			  font-size="15"
 			  font-weight="400"
 			  fill="#ef2121"
 			  stroke-width="0">
-			<tspan y="0"
-				   font-weight="400"
-				   stroke-width="0"><![CDATA[Sample Text]]></tspan>
+	<![CDATA[Sample Text]]>
 		</text>
 </svg>
