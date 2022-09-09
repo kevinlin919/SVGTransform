@@ -4,12 +4,7 @@
      viewBox="0 0 100 100"
      >
 <line x1="20"
-			  y1="10"
-			  x2="80"
-			  y2="60"
-			  fill="none"
-			  stroke="#3f5787"
-			  stroke-width="33"
-			  stroke-linecap="round"
-			  stroke-linejoin="round"/>
+      y1="10"
+      x2="80"
+      y2="60"/>
 </svg>
