@@ -3,6 +3,31 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="0 0 300 300"
      >
+	
+			<path d="M 10 10 L 210.0 0.0"
+			      fill="none"
+			      stroke="#2607ce"
+			      stroke-width="2"/>
+			<path d="M 10 10 A 10 5 0 0 0 60.0 20.0"
+			      fill="none"
+			      stroke="#5607ce"
+			      stroke-width="2"/>
+			<path d="M 10 10 Q 180.0 220.0 180.0 85.0"
+			      fill="none"
+			      stroke="#2657ce"
+			      stroke-width="2"/>
+			<path d="M 10 10 C 80.0 185.0 80.0 95.0 230.0 95.0"
+			      fill="none"
+			      stroke="#26071e"
+			      stroke-width="2"/>
+			<path d="M 10 10 C 80.0 185.0 80.0 95.0 230.0 95.0 T 180.0 125.0"
+			      fill="none"
+			      stroke="#26AAce"
+			      stroke-width="2"/>
+			<path d="M 10 10 C 80.0 185.0 80.0 95.0 230.0 95.0 S 130.0 155.0 230.0 135.0"
+			      fill="none"
+			      stroke="#260700"
+			      stroke-width="2"/>
 	<ellipse rx="39.542294"
 	         ry="39.542294"
 	         transform="translate(150 82.995364)"
