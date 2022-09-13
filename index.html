@@ -4,6 +4,11 @@
 <head>
 <style type="text/css">
   .svg-block__wrapper {
+        user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
   }
   .svg-block {
     border: solid 2px #cfcfcf;
@@ -15,11 +20,13 @@
 <body>
   <div class="svg-block__wrapper">
     <object type="image/svg+xml" class="svg-block"
+            data-url="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5"
             data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5">
     </object>
   </div>
   <div class="svg-block__wrapper">
     <object type="image/svg+xml" class="svg-block"
+            data-url="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=sample4"
             data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=sample4">
     </object>
   </div>
@@ -27,9 +34,47 @@
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     $(function() {
-      $(".svg-block__wrapper").click(function(e) {
-          console.log($(e.target));
-          //document.getElementById("svg1").data = "https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5&convert=1&width=1000&height=80";
+      var click_target = null;
+      var click_target_x = 0;
+      var click_target_y = 0;
+      
+      $(".svg-block__wrapper").mousedown(function(e) {
+        click_target = $(e.target);
+        pos = click_target.position();
+        click_target_x = pos.left;
+        click_target_y = pos.top;
+      });
+      
+      $(document).mousemove(function(e) {
+        if (click_target) {
+          var click_x = e.pageX;
+          var click_y = e.pageY;
+          if (click_x < click_target_x) {
+            click_x = click_target_x;
+          }
+          if (click_y < click_target_y) {
+            click_y = click_target_y;
+          }
+          click_target.prop('width', click_target_x - click_x);
+          click_target.prop('height', click_target_y - click_y);
+        }
+      });
+      
+      $(".svg-block__wrapper").mouseup(function(e) {
+        if (click_target) {
+          var click_x = e.pageX;
+          var click_y = e.pageY;
+          if (click_x < click_target_x) {
+            click_x = click_target_x;
+          }
+          if (click_y < click_target_y) {
+            click_y = click_target_y;
+          }
+          var width = click_target_x - click_x);
+          var height = click_target_y - click_y);
+          
+          click_target.data = click_target.data('url') + '&width=' + width + '&height' + height;
+        }
       });
     });
   </script>
