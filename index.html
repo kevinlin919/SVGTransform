@@ -2,15 +2,24 @@
 <head>
   <title>SVG Fixed Transformation</title>
 <head>
+<style type="text/css">
+  .svg-block {
+    border: solid 2px #cfcfcf;
+    cursor:pointer;
+  }
+</style>
 
 <body>
-  <object type="image/svg+xml" id="svg1" data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5&convert=1">
+  <object type="image/svg+xml" id="svg1" class="svg-block"
+          data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5&convert=1">
   </object>
   
   <script type="text/javascript">
-    window.onload = function(){
-      document.getElementById("svg1").data = 
-        "https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5&convert=1&width=1000&height=80";
+    window.onload = function() {
+      document.getElementById("svg-block").addEventListener('click', function (event) {
+        console.log(event);
+        //document.getElementById("svg1").data = "https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5&convert=1&width=1000&height=80";
+      });
     }
   </script>
 </body>
