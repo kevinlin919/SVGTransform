@@ -87,18 +87,10 @@
       $(document).mousemove(function(e) {
 		transform(e, false);
       });
-      document.addEventListener('touchmove', function(e) {
-		transform(e.targetTouches[0], false);
-      });
-      
+	    
       $(".svg-block__wrapper").mouseup(function(e) {
 		transform(e, true);
       });
-	    
-      document.addEventListener('touchend', function(e) {
-		transform({pageX: click_x, pageY: click_y}, true);
-      });
-      
     });
   </script>
 </body>
