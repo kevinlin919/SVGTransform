@@ -11,21 +11,20 @@
 
 <body>
   <object type="image/svg+xml" id="svg1" class="svg-block"
-          data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5&convert=1">
+          data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5">
   </object>
   <object type="image/svg+xml" id="svg2" class="svg-block"
-          data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=sample4&convert=1">
+          data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=sample4">
   </object>
   
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script type="text/javascript">
-    window.onload = function() {
-      document.querySelectorAll(".svg-block").forEach((el, i) => {
-        el.addEventListener('click', function (event) {
-          console.log(event);
+    $(function() {
+      $(".svg-block").click(function() => {
+          console.log($(this));
           //document.getElementById("svg1").data = "https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5&convert=1&width=1000&height=80";
-        });
       });
-    }
+    });
   </script>
 </body>
 </html>
