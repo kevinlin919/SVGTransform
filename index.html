@@ -46,14 +46,15 @@
       var click_target = null;
       var click_target_x = 0;
       var click_target_y = 0;
+	
+      var click_x = 0;
+      var click_y = 0;
 	  
+	    
 	  function transform(e, is_click) {
         if (click_target) {
-			console.log('move');
-			console.log(click_target);
-			console.log(e);
-          var click_x = e.pageX;
-          var click_y = e.pageY;
+          click_x = e.pageX;
+          click_y = e.pageY;
 		  
           if (click_x < click_target_x) {
             click_x = click_target_x;
@@ -70,7 +71,6 @@
           click_target.css('height', height);
 		  
 			if (is_click) {
-				console.log('click');
 			  click_target.attr('data', click_target.data('url') + '&width=' + width + '&height=' + height);
 			  click_target = null;
 			}
@@ -78,21 +78,27 @@
 	  }
       
       $(".svg-block__wrapper").mousedown(function(e) {
-        click_target = $(e.target).find('object');
-        pos = click_target.position();
-        click_target_x = pos.left;
-        click_target_y = pos.top;
-		console.log(click_target);
-		console.log(pos);
+		click_target = $(e.target).find('object');
+		pos = click_target.position();
+		click_target_x = pos.left;
+		click_target_y = pos.top;
       });
       
       $(document).mousemove(function(e) {
 		transform(e, false);
       });
+      document.addEventListener('touchmove', function(e) {
+		transform(e.targetTouches[0], false);
+      });
       
       $(".svg-block__wrapper").mouseup(function(e) {
 		transform(e, true);
       });
+	    
+      document.addEventListener('touchend', function(e) {
+		transform({pageX: click_x, pageY: click_y}, true);
+      });
+      
     });
   </script>
 </body>
