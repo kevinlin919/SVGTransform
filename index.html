@@ -18,16 +18,38 @@
 </style>
 
 <body>
+	<h1>Paint</h1>
   <div class="svg-block__wrapper">
     <object type="image/svg+xml" class="svg-block"
             data-url="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5"
             data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5">
     </object>
   </div>
+  <br>
+  
+	<h1>Hospital</h1>
   <div class="svg-block__wrapper">
     <object type="image/svg+xml" class="svg-block"
-            data-url="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=sample4"
-            data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=sample4">
+            data-url="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=hospital"
+            data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=hospital">
+    </object>
+  </div>
+  <br>
+  
+	<h1>Deer</h1>
+  <div class="svg-block__wrapper">
+    <object type="image/svg+xml" class="svg-block"
+            data-url="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=deer"
+            data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=deer">
+    </object>
+  </div>
+  <br>
+  
+	<h1>Skeleton</h1>
+  <div class="svg-block__wrapper">
+    <object type="image/svg+xml" class="svg-block"
+            data-url="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=skeleton"
+            data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=skeleton">
     </object>
   </div>
   
@@ -37,44 +59,52 @@
       var click_target = null;
       var click_target_x = 0;
       var click_target_y = 0;
+	  
+	  function transform(e, is_click) {
+        if (click_target) {
+			console.log('move');
+			console.log(click_target);
+			console.log(e);
+          var click_x = e.pageX;
+          var click_y = e.pageY;
+		  
+          if (click_x < click_target_x) {
+            click_x = click_target_x;
+          }
+          if (click_y < click_target_y) {
+            click_y = click_target_y;
+          }
+		  
+		  width = click_x - click_target_x;
+		  height = click_y - click_target_y;
+			console.log(click_x);
+			console.log(click_y);
+          click_target.css('width', width);
+          click_target.css('height', height);
+		  
+			if (is_click) {
+				console.log('click');
+			  click_target.attr('data', click_target.data('url') + '&width=' + width + '&height=' + height);
+			  click_target = null;
+			}
+        }
+	  }
       
       $(".svg-block__wrapper").mousedown(function(e) {
-        click_target = $(e.target);
+        click_target = $(e.target).find('object');
         pos = click_target.position();
         click_target_x = pos.left;
         click_target_y = pos.top;
+		console.log(click_target);
+		console.log(pos);
       });
       
       $(document).mousemove(function(e) {
-        if (click_target) {
-          var click_x = e.pageX;
-          var click_y = e.pageY;
-          if (click_x < click_target_x) {
-            click_x = click_target_x;
-          }
-          if (click_y < click_target_y) {
-            click_y = click_target_y;
-          }
-          click_target.prop('width', click_target_x - click_x);
-          click_target.prop('height', click_target_y - click_y);
-        }
+		transform(e, false);
       });
       
       $(".svg-block__wrapper").mouseup(function(e) {
-        if (click_target) {
-          var click_x = e.pageX;
-          var click_y = e.pageY;
-          if (click_x < click_target_x) {
-            click_x = click_target_x;
-          }
-          if (click_y < click_target_y) {
-            click_y = click_target_y;
-          }
-          var width = click_target_x - click_x;
-          var height = click_target_y - click_y;
-          
-          click_target.data = click_target.data('url') + '&width=' + width + '&height' + height;
-        }
+		transform(e, true);
       });
     });
   </script>
