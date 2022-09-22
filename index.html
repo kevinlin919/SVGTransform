@@ -24,7 +24,16 @@
 <body>
 	<h1>Paint</h1>
   <div class="svg-block__wrapper">
-    <object type="image/svg+xml" class="svg-block"
+	<span class="width-input__wrapper">
+		寬: <input type="text" class="width-input">
+	</span>
+	<span class="height-input__wrapper">
+		高: <input type="text" class="height-input">
+	</span>
+	<button class="button-submit">送出</button>
+	<br>
+	<br>
+    <object type="image/svg+xml" class="svg-block" onload="svg_onload(event)"
             data-url="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5"
             data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=paint5">
     </object>
@@ -33,7 +42,16 @@
   
 	<h1>Hospital</h1>
   <div class="svg-block__wrapper">
-    <object type="image/svg+xml" class="svg-block"
+	<span class="width-input__wrapper">
+		寬: <input type="text" class="width-input">
+	</span>
+	<span class="height-input__wrapper">
+		高: <input type="text" class="height-input">
+	</span>
+	<button class="button-submit">送出</button>
+	<br>
+	<br>
+    <object type="image/svg+xml" class="svg-block" onload="svg_onload(event)"
             data-url="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=hospital"
             data="https://4sdsn3rl5hpxbudsi4ggpbq4240tupgg.lambda-url.ap-northeast-1.on.aws/?name=hospital">
     </object>
@@ -42,6 +60,12 @@
   
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script type="text/javascript">
+	  function svg_onload(e) {
+		var top = $(e.target).closest('.svg-block__wrapper');
+		
+		top.find('.width-input').val($(e.target).width());
+		top.find('.height-input').val($(e.target).height());
+	  }
     $(function() {
       var click_target = null;
       var click_target_x = 0;
@@ -50,8 +74,27 @@
       var click_x = 0;
       var click_y = 0;
 	  
-	    
-	  function transform(e, is_click) {
+	  function transform(svg, width, height, is_update) {
+          svg.css('width', width);
+          svg.css('height', height);
+		  
+		  svg.closest('.svg-block__wrapper').find('.width-input').val(width);
+		  svg.closest('.svg-block__wrapper').find('.height-input').val(height);
+		  
+			if (is_update) {
+				var url = svg.data('url');
+				if (width != '') {
+					url += '&width=' + width;
+				}
+				if (height != '') {
+					url += '&height=' + height;
+				}
+			  svg.attr('data', url);
+			  click_target = null;
+			}
+	  }
+	  
+	  function mouse_transform(e, is_click) {
         if (click_target) {
           click_x = e.pageX;
           click_y = e.pageY;
@@ -65,32 +108,62 @@
 		  
 		  width = click_x - click_target_x;
 		  height = click_y - click_target_y;
-			console.log(click_x);
-			console.log(click_y);
-          click_target.css('width', width);
-          click_target.css('height', height);
-		  
-			if (is_click) {
-			  click_target.attr('data', click_target.data('url') + '&width=' + width + '&height=' + height);
-			  click_target = null;
-			}
+		  transform(click_target, width, height, is_click);
         }
 	  }
+	  
+	  function button_submit(e) {
+		var top = $(e.target).closest('.svg-block__wrapper');
+		var width = top.find('.width-input').val();
+		var height = top.find('.height-input').val();
+		var svg = top.find('.svg-block');
+		transform(svg, width, height, true);
+	  }
+	  
+	  function input_enter(e) {
+		if(e.which == 13) {
+			button_submit(e);
+		}
+	  }
+	  
+      $(".button-submit").click(function(e) {
+		button_submit(e);
+	  });
+      
+      $(".width-input").keypress(function(e) {
+		input_enter(e);
+	  });
+	  
+      $(".height-input").keypress(function(e) {
+		input_enter(e);
+	  });
       
       $(".svg-block__wrapper").mousedown(function(e) {
-		click_target = $(e.target).find('object');
+		  e = e || window.event;
+		  switch (e.which) {
+			case 1: break;
+			case 2: 
+			case 3:
+				return;
+				break;
+		  }
+		click_target = $(e.target).find('.svg-block');
 		pos = click_target.position();
-		click_target_x = pos.left;
-		click_target_y = pos.top;
+		if (pos) {
+			click_target_x = pos.left;
+			click_target_y = pos.top;
+		}
       });
       
       $(document).mousemove(function(e) {
-		transform(e, false);
+		mouse_transform(e, false);
       });
-	    
+	  
       $(".svg-block__wrapper").mouseup(function(e) {
-		transform(e, true);
+		mouse_transform(e, true);
       });
+	  
+      
     });
   </script>
 </body>
