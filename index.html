@@ -159,6 +159,13 @@
 		mouse_transform(e, false);
       });
 	  
+      $(document).mouseout(function(e) {
+		console.log($(e.target).prop('tagName'));
+		if($(e.target).prop('tagName') == 'HTML') {
+			mouse_transform(e, true);
+		}
+      });
+	  
       $(".svg-block__wrapper").mouseup(function(e) {
 		mouse_transform(e, true);
       });
