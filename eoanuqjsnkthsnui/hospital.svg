@@ -1,8 +1,6 @@
 <svg width="297.5" height="297.5" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1">
   
   <ellipse stroke="#000" ry="30.5" rx="30.5" id="svg_37" cy="51.08333" cx="150.25" fill="#fff"/>
-  <ellipse fill="#fff" stroke="#000" cx="211.75" cy="7.58333" id="svg_38" rx="27" ry="27"/>
-  <ellipse fill="#fff" stroke="#000" cx="84.75" cy="8.58333" id="svg_39" rx="24" ry="24"/>
   <ellipse fill="#fff" stroke="#000" cx="274.75" cy="81.58333" id="svg_40" rx="22" ry="22"/>
   <ellipse fill="#fff" stroke="#000" cx="275.75" cy="282.58333" id="svg_41" rx="23" ry="23"/>
   <ellipse fill="#fff" stroke="#000" cx="17.75" cy="283.58333" id="svg_42" rx="21" ry="21"/>
@@ -18,7 +16,6 @@
   <ellipse stroke="#000" fill="#fff" cx="82.75" cy="157.58333" id="svg_53" rx="14" ry="14"/>
   <ellipse stroke="#000" fill="#fff" cx="82.25" cy="124.08333" id="svg_54" rx="14.5" ry="14.5"/>
   <ellipse stroke="#000" fill="#fff" cx="89.75" cy="78.58333" id="svg_55" rx="28" ry="28"/>
-  <ellipse stroke="#000" fill="#fff" cx="215.75" cy="79.58333" id="svg_56" rx="28" ry="28"/>
   <ellipse stroke="#000" fill="#fff" cx="130.75" cy="124.06609" id="svg_57" rx="15" ry="15.51724"/>
   <ellipse stroke="#000" fill="#fff" cx="166.75" cy="123.58333" id="svg_58" rx="14" ry="14"/>
   <ellipse stroke="#000" fill="#fff" cx="130.75" cy="156.58333" id="svg_59" rx="14" ry="14"/>
@@ -39,4 +36,7 @@
   <ellipse ry="17" rx="17" id="svg_75" cy="284.58333" cx="181.75" stroke="#000" fill="#fff"/>
   <ellipse stroke="#000" ry="10.5" rx="10.5" id="svg_76" cy="277.08333" cx="149.25" fill="#fff"/>
   <ellipse ry="11" rx="11" id="svg_77" cy="215.58333" cx="148.75" stroke="#000" fill="#fff"/>
+  <ellipse stroke="#000" fill="#fff" cx="89.75" cy="9.58333" id="svg_81" rx="28" ry="28"/>
+  <ellipse stroke="#000" fill="#fff" cx="215.75" cy="9.58333" id="svg_82" rx="28" ry="28"/>
+  <ellipse stroke="#000" fill="#fff" cx="215.75" cy="78.58333" id="svg_83" rx="28" ry="28"/>
 </svg>
