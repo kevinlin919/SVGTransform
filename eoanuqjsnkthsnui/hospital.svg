@@ -35,4 +35,10 @@
   <ellipse fill="#fff" stroke="#000" cx="247.75" cy="221.58333" id="svg_70" rx="13" ry="13"/>
   <ellipse fill="#fff" stroke="#000" cx="210.75" cy="254.58333" id="svg_71" rx="14" ry="14"/>
   <ellipse fill="#fff" stroke="#000" cx="246.75" cy="254.58333" id="svg_72" rx="12" ry="12"/>
+  <ellipse ry="20" rx="20" id="svg_74" cy="283.58333" cx="116.75" stroke="#000" fill="#fff"/>
+  <ellipse ry="17" rx="17" id="svg_75" cy="284.58333" cx="181.75" stroke="#000" fill="#fff"/>
+  <ellipse ry="10" rx="10" id="svg_76" cy="277.58333" cx="149.75" stroke="#000" fill="#fff"/>
+  <ellipse ry="11" rx="11" id="svg_77" cy="215.58333" cx="148.75" stroke="#000" fill="#fff"/>
+  <ellipse ry="15" rx="15" id="svg_78" cy="61.58333" cx="83.75" stroke="#000" fill="#fff"/>
+  <ellipse ry="17" rx="17" id="svg_79" cy="61.58333" cx="212.75" stroke="#000" fill="#fff"/>
 </svg>
